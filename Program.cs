@@ -33,7 +33,7 @@ namespace DinamicArrayAdvanced
                 switch (userInput)
                 {
                     case CommandSum:
-                        CalculateTheAmount(ref numbers, userInput);
+                        CalculateTheAmount(numbers);
                         break;
 
                     case CommandExit:
@@ -41,7 +41,7 @@ namespace DinamicArrayAdvanced
                         break;
 
                     default:
-                        ReadNumber(ref numbers, userInput);
+                        AddingToTheList(numbers, userInput);
                         break;
                 }
             }
@@ -49,7 +49,7 @@ namespace DinamicArrayAdvanced
             Console.WriteLine("Вы вышли из программы.");
         }
 
-        private static void CalculateTheAmount(ref List<int> numbers, string userInput)
+        private static void CalculateTheAmount(List<int> numbers)
         {
             int sum = 0;
 
@@ -59,7 +59,7 @@ namespace DinamicArrayAdvanced
             Console.WriteLine($"Сумма всех чисел массива равна {sum}");
         }
 
-        private static void ReadNumber(ref List<int> numbers, string userInput)
+        private static void AddingToTheList(List<int> numbers, string userInput)
         {
             int number;
 
